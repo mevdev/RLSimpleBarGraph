@@ -3,7 +3,7 @@ RLSimpleBarGraph
 
 A UIView-based simple bar graph.
 
-![Screenshot](https://github.com/mevdev/RLSimpleBarGraph/blob/master/screenshot.png)
+![Screenshot](https://github.com/mevdev/RLSimpleBarGraph/blob/master/screenshot.png?raw=true)
 
 **features:**
 
@@ -45,8 +45,8 @@ RLSimpleBarGraph IBOutlet *yourRLSimpleBarGraph;
 
 ## Contact
 
- - ![Robert](http://robertlinnemann.com)
+[Robert](http://robertlinnemann.com)
 
 ## License
 
- - See ![LICENSE](https://github.com/mevdev/RLSimpleBarGraph/blob/master/MIT-LICENSE.txt).
+See [LICENSE](https://github.com/mevdev/RLSimpleBarGraph/blob/master/MIT-LICENSE.txt).
