@@ -92,14 +92,15 @@
     
     
     //build scale
+    if(showScale){
         NSMutableArray *tmpScalesArr = [[NSMutableArray alloc] init];
         for(int i=0;i<scales;i++){
-                //beginning x,y
-                //x,y for MAX
-                //space accordingly.
+            //beginning x,y
+            //x,y for MAX
+            //space accordingly.
             NSInteger scaleX = self.bounds.size.width * 0.02;
             NSInteger currentBarY = (barY-12) - (((self.bounds.size.height) / scales) * i);
-//            NSInteger barHeight = (( / [barMax doubleValue]) * graphHeight);
+            //            NSInteger barHeight = (( / [barMax doubleValue]) * graphHeight);
             CGRect aRect = CGRectMake(scaleX, currentBarY, 50.0, 20.0);
             UILabel *aScale = [[UILabel alloc] initWithFrame:aRect];
             aScale.font = [UIFont systemFontOfSize:fontPoint];
@@ -117,8 +118,9 @@
             [tmpScalesArr addObject:aScale];
         }
         
-    //draw bars?
+        //draw bars?
         scaleViews = [[NSArray alloc] initWithArray:tmpScalesArr]; //save this
+    }
     }
 }
 
