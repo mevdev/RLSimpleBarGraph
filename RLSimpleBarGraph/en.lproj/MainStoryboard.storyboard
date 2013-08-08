@@ -13,15 +13,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMu-Fw-So3" customClass="RLSimpleBarGraph">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.91624915080000002" green="0.91624915080000002" blue="0.91624915080000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="fMu-Fw-So3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WzW-lS-Il5"/>
-                            <constraint firstItem="fMu-Fw-So3" firstAttribute="top" secondItem="j8I-Cb-0tj" secondAttribute="top" constant="140" id="dEE-P4-1HL"/>
-                            <constraint firstItem="fMu-Fw-So3" firstAttribute="centerY" secondItem="j8I-Cb-0tj" secondAttribute="centerY" type="default" id="rXH-zw-rGd"/>
-                            <constraint firstItem="fMu-Fw-So3" firstAttribute="leading" secondItem="j8I-Cb-0tj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vyH-63-lwE"/>
+                            <constraint firstAttribute="trailing" secondItem="fMu-Fw-So3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="BHG-rc-nep"/>
+                            <constraint firstItem="fMu-Fw-So3" firstAttribute="top" secondItem="j8I-Cb-0tj" secondAttribute="top" constant="111" id="Z82-DX-rzG"/>
+                            <constraint firstAttribute="bottom" secondItem="fMu-Fw-So3" secondAttribute="bottom" constant="175" id="d0c-4v-mE6"/>
+                            <constraint firstItem="fMu-Fw-So3" firstAttribute="leading" secondItem="j8I-Cb-0tj" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fOa-NT-cu9"/>
                         </constraints>
                     </view>
                     <connections>

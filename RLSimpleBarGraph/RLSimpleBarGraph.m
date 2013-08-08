@@ -11,6 +11,8 @@
 
 @implementation RLSimpleBarGraph
 
+@synthesize showScale,barMax,scalePrecision;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -37,16 +39,17 @@
 -(void)actualInit {
     /// ALL temporary data for testing
     if(barData == nil){
-        barData = @[@1,@2,@4,@6,@8,@10,@3,@5,@7];
+        barData = @[@1,@2,@4,@6,@8,@10,@3,@5]; //demo data
     }
     showScale = YES;
-    scalePrecision = 1;
+    scalePrecision = 0;
+    showScale = YES;
 }
 
 -(void)layoutSubviews {
     
     NSInteger scales = 5;
-    NSInteger pixelPadding = 2;
+    NSInteger pixelPadding = 4;
     NSInteger fontPoint = 12;
     //do it!
     //kick it!
@@ -60,7 +63,7 @@
         NSInteger barY = self.bounds.size.height * 0.9; //bottom of bar
         NSInteger graphWidth = self.bounds.size.width * 0.8;
         NSInteger graphHeight = self.bounds.size.height * 0.8;
-        NSInteger barX = self.bounds.size.width * 0.1;
+        NSInteger barX = self.bounds.size.width * 0.15;
         NSInteger barWidth = graphWidth / [barData count] - (pixelPadding);
         
         NSInteger counter = 0;
@@ -72,7 +75,15 @@
             
             CGRect aRect = CGRectMake(currentBarX+(pixelPadding * counter), barY - barHeight, barWidth, barHeight);
             UIView *aBar = [[UIView alloc] initWithFrame:aRect];
-            aBar.backgroundColor = [UIColor blackColor];
+            if(achievedColor == nil){
+                aBar.backgroundColor = [UIColor blackColor];
+            } else {
+                if([barNum doubleValue] >= [achievementNumber doubleValue]){
+                    aBar.backgroundColor = achievedColor;
+                } else {
+                    aBar.backgroundColor = notAchievedColor;
+                }
+            }
             
             [self addSubview:aBar];
             [tmpBarsArr addObject:aBar];
@@ -123,11 +134,19 @@
         case 2:
             return @"%.02f";
             break;
-            
+        case 3:
+            return @"%.03f";
+            break;
         default:
             return @"%.f";
             break;
     }
+}
+
+-(void)setAchievementAt: (double) theAchievementNumber setAchievedColor: (UIColor *)aColor andNotAchievedColor: (UIColor *)notColor {    
+    achievementNumber = [NSNumber numberWithDouble:theAchievementNumber];
+    achievedColor = aColor;
+    notAchievedColor = notColor;
 }
 
 /*
