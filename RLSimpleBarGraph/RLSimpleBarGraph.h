@@ -15,12 +15,12 @@
 {
     //data
     NSArray *barData; //nsnumbers.
-    NSNumber *barMax;
     NSNumber *achievementNumber;
     
     
     //settings
     BOOL showScale;
+    NSNumber *barMax;
     NSInteger scalePrecision;
 
     //paging

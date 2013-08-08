@@ -18,6 +18,7 @@
 		803FBDBD17B32BEF00B772EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 803FBDBC17B32BEF00B772EB /* Default-568h@2x.png */; };
 		803FBDC017B32BEF00B772EB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 803FBDBE17B32BEF00B772EB /* MainStoryboard.storyboard */; };
 		803FBDC317B32BEF00B772EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 803FBDC217B32BEF00B772EB /* ViewController.m */; };
+		803FBDCB17B32C4900B772EB /* RLSimpleBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 803FBDCA17B32C4900B772EB /* RLSimpleBarGraph.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		803FBDBF17B32BEF00B772EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		803FBDC117B32BEF00B772EB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		803FBDC217B32BEF00B772EB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		803FBDC917B32C4900B772EB /* RLSimpleBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSimpleBarGraph.h; sourceTree = "<group>"; };
+		803FBDCA17B32C4900B772EB /* RLSimpleBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSimpleBarGraph.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				803FBDBE17B32BEF00B772EB /* MainStoryboard.storyboard */,
 				803FBDC117B32BEF00B772EB /* ViewController.h */,
 				803FBDC217B32BEF00B772EB /* ViewController.m */,
+				803FBDC917B32C4900B772EB /* RLSimpleBarGraph.h */,
+				803FBDCA17B32C4900B772EB /* RLSimpleBarGraph.m */,
 				803FBDAD17B32BEF00B772EB /* Supporting Files */,
 			);
 			path = RLSimpleBarGraph;
@@ -176,6 +181,7 @@
 				803FBDB317B32BEF00B772EB /* main.m in Sources */,
 				803FBDB717B32BEF00B772EB /* AppDelegate.m in Sources */,
 				803FBDC317B32BEF00B772EB /* ViewController.m in Sources */,
+				803FBDCB17B32C4900B772EB /* RLSimpleBarGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,9 +30,15 @@
     return self;
 }
 
+-(void)basicInit:(NSArray *)basicArray{
+    barData = basicArray;
+}
+
 -(void)actualInit {
     /// ALL temporary data for testing
-    barData = @[@1,@2,@4,@6,@8,@10,@3,@5,@7];
+    if(barData == nil){
+        barData = @[@1,@2,@4,@6,@8,@10,@3,@5,@7];
+    }
     showScale = YES;
     scalePrecision = 1;
 }
@@ -119,6 +125,7 @@
             break;
             
         default:
+            return @"%.f";
             break;
     }
 }

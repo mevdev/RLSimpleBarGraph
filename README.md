@@ -31,13 +31,13 @@ Import header.
 
 In viewController header:
 ``` objective-c
-RLSimpleBarGraph *yourRLSimpleBarGraph;
+RLSimpleBarGraph IBOutlet *yourRLSimpleBarGraph;
 ```
 ####3. In your viewWillAppear: put something like this for the most simple version.
 
 ``` objective-c
 -(void)viewWillAppear: …
-yourRLSimpleBarGraph = [[RLSimpleBarGraph alloc] 
+    [yourRLSimpleBarGraph basicInit: @[@1,@2,@4,@6,@8,@10,@3]];
 
 ```
 
