@@ -29,6 +29,7 @@
     [yourRLSimpleBarGraph setAchievementAt:5.0 setAchievedColor:[UIColor blueColor] andNotAchievedColor:[UIColor lightGrayColor]];
     
 //    yourRLSimpleBarGraph.showScale = NO; //for no scale guides
+//    yourRLSimpleBarGraph.numOfScales = 3 //number of guides, default 5
     
 }
 

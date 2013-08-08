@@ -11,7 +11,7 @@
 
 @implementation RLSimpleBarGraph
 
-@synthesize showScale,barMax,scalePrecision;
+@synthesize showScale,barMax,scalePrecision,numOfScales;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -44,11 +44,12 @@
     showScale = YES;
     scalePrecision = 0;
     showScale = YES;
+    numOfScales = 5;
 }
 
 -(void)layoutSubviews {
-    
-    NSInteger scales = 5;
+
+    //    numOfScales
     NSInteger pixelPadding = 4;
     NSInteger fontPoint = 12;
     //do it!
@@ -94,12 +95,12 @@
     //build scale
     if(showScale){
         NSMutableArray *tmpScalesArr = [[NSMutableArray alloc] init];
-        for(int i=0;i<scales;i++){
+        for(int i=0;i<numOfScales;i++){
             //beginning x,y
             //x,y for MAX
             //space accordingly.
             NSInteger scaleX = self.bounds.size.width * 0.02;
-            NSInteger currentBarY = (barY-12) - (((self.bounds.size.height) / scales) * i);
+            NSInteger currentBarY = (barY-12) - (((self.bounds.size.height) / numOfScales) * i);
             //            NSInteger barHeight = (( / [barMax doubleValue]) * graphHeight);
             CGRect aRect = CGRectMake(scaleX, currentBarY, 50.0, 20.0);
             UILabel *aScale = [[UILabel alloc] initWithFrame:aRect];
@@ -108,10 +109,10 @@
             double scaleValue = 0.0;
             if(i==0){ //bottom
                 scaleValue = 0.0;
-            } else if (i==(scales-1)) { //MAX
+            } else if (i==(numOfScales-1)) { //MAX
                 scaleValue = [barMax doubleValue];
             } else { //normal ones
-                scaleValue = [barMax doubleValue] * ((double)i/(double)(scales-1));
+                scaleValue = [barMax doubleValue] * ((double)i/(double)(numOfScales-1));
             }
             aScale.text = [NSString stringWithFormat:[self getPrecision],scaleValue];
             [self addSubview:aScale];

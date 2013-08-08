@@ -37,6 +37,7 @@
 @property (nonatomic, assign) BOOL showScale;
 @property (nonatomic, strong) NSNumber *barMax;
 @property (nonatomic, assign) NSInteger scalePrecision;
+@property (nonatomic, assign) NSInteger numOfScales;
 
 
 
