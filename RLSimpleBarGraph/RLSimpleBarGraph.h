@@ -18,8 +18,9 @@
 
 ///paging
 //    BOOL pagingOn;
-//    NSInteger currentPage;
-//    NSInteger itemsPerPage;
+    NSInteger currentPage;
+
+
     
     //labels and views
     NSArray *barViews;
@@ -38,7 +39,12 @@
 @property (nonatomic, strong) NSNumber *barMax;
 @property (nonatomic, assign) NSInteger scalePrecision;
 @property (nonatomic, assign) NSInteger numOfScales;
+@property (nonatomic, assign) NSInteger itemsPerPage;//if > 0 paging enabled
 
+-(void)addPagingGestures;
+-(void)removeGestures;
+-(void)pageLeft:(UIGestureRecognizer*)recognizer;
+-(void)pageRight:(UIGestureRecognizer*)recognizer;
 
 
 -(void)basicInit:(NSArray *)basicArray;
