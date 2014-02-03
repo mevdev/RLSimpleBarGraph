@@ -26,8 +26,10 @@
     [yourRLSimpleBarGraph basicInit: @[@1,@2,@4,@6,@8,@10,@3,@1,@1,@15,@7]];
     
     //Now whichever bars are over 5.0 are color blue and lower are light gray
-    [yourRLSimpleBarGraph setAchievementAt:5.0 setAchievedColor:[UIColor blueColor] andNotAchievedColor:[UIColor lightGrayColor]];
+//    [yourRLSimpleBarGraph setAchievementAt:5.0 setAchievedColor:[UIColor blueColor] andNotAchievedColor:[UIColor lightGrayColor]];
+ 
     
+    [yourRLSimpleBarGraph  alternateColors:@[[UIColor grayColor],[UIColor blackColor],[UIColor purpleColor]]];
     //    yourRLSimpleBarGraph.showScale = NO; //for no scale guides
     //    yourRLSimpleBarGraph.numOfScales = 3 //number of guides, default 5
     yourRLSimpleBarGraph.scalePrecision = 1; //0 for no precision, 1 for 1.0, 2 for 2.00, 3 for 3.000

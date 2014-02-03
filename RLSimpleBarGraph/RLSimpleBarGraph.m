@@ -37,6 +37,10 @@
     barData = basicArray;
 }
 
+-(void) alternateColors: (NSArray *)colorsArray {
+	alternatingColors = [NSArray arrayWithArray:colorsArray];
+}
+
 -(void)actualInit {
     /// ALL temporary data for testing
     if(barData == nil){
@@ -95,7 +99,11 @@
             CGRect aRect = CGRectMake(currentBarX+(pixelPadding * counter), barY - barHeight, barWidth, barHeight);
             UIView *aBar = [[UIView alloc] initWithFrame:aRect];
             if(achievedColor == nil){
-                aBar.backgroundColor = [UIColor blackColor];
+				if(alternatingColors == nil){
+					aBar.backgroundColor = [UIColor lightGrayColor];
+				} else {
+					aBar.backgroundColor = [alternatingColors objectAtIndex:counter%[alternatingColors count]];
+				}
             } else {
                 if([barNum doubleValue] >= [achievementNumber doubleValue]){
                     aBar.backgroundColor = achievedColor;

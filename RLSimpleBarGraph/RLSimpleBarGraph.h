@@ -19,8 +19,6 @@
 ///paging
 //    BOOL pagingOn;
     NSInteger currentPage;
-
-
     
     //labels and views
     NSArray *barViews;
@@ -32,6 +30,7 @@
     UIColor *notAchievedColor;
     NSString *achievedImage;
     NSString *notAchievedImage;
+    NSArray *alternatingColors;
 
 }
 //settings
@@ -48,6 +47,7 @@
 
 
 -(void)basicInit:(NSArray *)basicArray;
+-(void) alternateColors: (NSArray *)colorsArray;
 //-(void)setMin: (double)minNum andMax: (double)maxNum;
 -(void)setAchievementAt: (double) theAchievementNumber setAchievedColor: (UIColor *)aColor andNotAchievedColor: (UIColor *)notColor;
 
