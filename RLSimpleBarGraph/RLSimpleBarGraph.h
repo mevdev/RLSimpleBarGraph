@@ -31,6 +31,7 @@
     NSString *achievedImage;
     NSString *notAchievedImage;
     NSArray *alternatingColors;
+    
 
 }
 //settings
@@ -39,6 +40,7 @@
 @property (nonatomic, assign) NSInteger scalePrecision;
 @property (nonatomic, assign) NSInteger numOfScales;
 @property (nonatomic, assign) NSInteger itemsPerPage;//if > 0 paging enabled
+@property (nonatomic, assign) NSInteger fixedBarWidth;
 
 -(void)addPagingGestures;
 -(void)removeGestures;

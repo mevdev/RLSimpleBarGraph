@@ -12,7 +12,7 @@
 @implementation RLSimpleBarGraph
 
 @synthesize showScale,barMax,scalePrecision,numOfScales;
-@synthesize itemsPerPage;
+@synthesize itemsPerPage,fixedBarWidth;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -51,6 +51,7 @@
     itemsPerPage = 0; //no paging.
     showScale = YES;
     numOfScales = 5;
+    fixedBarWidth = -1;
 }
 
 -(void)layoutSubviews {
@@ -87,13 +88,20 @@
         NSInteger graphWidth = self.bounds.size.width * 0.8;
         NSInteger graphHeight = self.bounds.size.height * 0.8;
         NSInteger barX = self.bounds.size.width * 0.15;
-        NSInteger barWidth = graphWidth / [barDataConstruction count] - (pixelPadding);
+		NSInteger barWidth = 0;
+		if(fixedBarWidth>0) {
+			barWidth = fixedBarWidth;
+			pixelPadding = (graphWidth / [barDataConstruction count]) - barWidth;
+		} else {
+			barWidth = graphWidth / [barDataConstruction count] - (pixelPadding);
+		}
         
         NSInteger counter = 0;
-        
+        NSInteger XOffset = 0;
         //calculate how many across and how big. (with const padding)
         for (NSNumber *barNum in barDataConstruction){
-            NSInteger currentBarX = barX + (barWidth * counter);
+            if(fixedBarWidth>0)XOffset = pixelPadding/2;
+            NSInteger currentBarX = XOffset + barX + (barWidth * counter);
             NSInteger barHeight = (([barNum doubleValue] / [barMax doubleValue]) * graphHeight);
             
             CGRect aRect = CGRectMake(currentBarX+(pixelPadding * counter), barY - barHeight, barWidth, barHeight);

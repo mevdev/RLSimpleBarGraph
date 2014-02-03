@@ -34,6 +34,7 @@
     //    yourRLSimpleBarGraph.numOfScales = 3 //number of guides, default 5
     yourRLSimpleBarGraph.scalePrecision = 1; //0 for no precision, 1 for 1.0, 2 for 2.00, 3 for 3.000
     yourRLSimpleBarGraph.itemsPerPage = 4;
+//    yourRLSimpleBarGraph.fixedBarWidth = 21;
 }
 
 - (void)didReceiveMemoryWarning
